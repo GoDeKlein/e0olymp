@@ -9,6 +9,4 @@ int main() {
         cin >> l >> w >> h;
         int s = 2 * h * (w + l);
         cout << (s % 16 != 0 ? s / 16 + 1 : s / 16) << endl;
-    }
-    return 0;
-}
+    
