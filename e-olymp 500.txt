@@ -5,8 +5,8 @@ int main() {
     int r;
     cin >> r;
     for(int i = 0; i < r; ++i){
-        int l, w, h; 
-        cin >> l >> w >> h;
+        int l, w, h, e; 
+        cin >> l0 >> w >> h >> e;
         int s = 2 * h * (w + l);
         cout << (s % 16 != 0 ? s / 16 + 1 : s / 16) << endl;
     }
