@@ -1,0 +1,32 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+ 
+ 
+int main()
+{
+     int n, m;  
+     const int MAXN = 10000001;
+     bool simple[MAXN];
+     for(int i = 2; i <= MAXN; i++){
+         simple[i] = true;
+     }
+     for(int i = 2; i <= sqrt(MAXN); i++){
+         if(simple[i]){
+             for(int j = i * i; j <= MAXN; j += i){
+                 simple[j] = false;
+             }
+         }
+     }
+ 
+     int count[MAXN];
+     int lastSum = 0;
+     for(int i = 1; i < MAXN; i++){
+         count[i] = lastSum + simple[i];
+         lastSum = count[i];
+     }
+     while(cin >> m >> n){
+         int answer = count[n] - count[m] + simple[m];
+         cout << answer << endl << endl;
+     }
+}
