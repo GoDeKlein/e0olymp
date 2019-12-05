@@ -11,4 +11,5 @@ int main() {
         cout << (s % 16 != 0 ? s / 16 + 1 : s / 16) << endl;
     }
     return 0;
+    guiytt
 }
